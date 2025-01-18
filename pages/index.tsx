@@ -135,7 +135,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [location, setLocation] = useState("");
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     router.push(`/jobs?search=${searchQuery}&location=${location}`);
   };
