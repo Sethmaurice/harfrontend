@@ -292,7 +292,7 @@ export default function Home() {
             <div>
               <h5 className="text-lg font-semibold mb-4">Quick Links</h5>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="/jobs" className="hover:text-white transition">Browse Jobs</a></li>
+                <li><a href="/jobs" className="hover:text-white transition">Browse Jobs Here</a></li>
                 <li><a href="#" className="hover:text-white transition">Companies</a></li>
                 <li><a href="#" className="hover:text-white transition">Resources</a></li>
               </ul>
