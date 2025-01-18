@@ -23,20 +23,42 @@ export default function Apply() {
     if (jobId) fetchJobDetails();
   }, [jobId]);
 
-  const handleApply = async () => {
-    const userId = localStorage.getItem('userId'); // Retrieve user ID
-    // const role = localStorage.getItem('role'); // Retrieve role
-    console.log('User ID:', userId);
-    console.log('Job ID:', jobId);
-    // console.log('Role:', role);
+  // const handleApply = async () => {
+  //   const userId = localStorage.getItem('userId'); // Retrieve user ID
+  //   // const role = localStorage.getItem('role'); // Retrieve role
+  //   console.log('User ID:', userId);
+  //   console.log('Job ID:', jobId);
+  //   // console.log('Role:', role);
 
   
+  //   if (!userId) {
+  //     alert('You need to log in to apply for this job.');
+  //     router.push('/login');
+  //     return;
+  //   }
+  
+  //   try {
+  //     await axios.post(`http://localhost:4000/applications/apply/${userId}/${jobId}`);
+  //     alert('Application successful!');
+  //     router.push('/applications'); // Redirect to applications page
+  //   } catch (err) {
+  //     console.error('Application error:', err.response?.data || err.message);
+  //     setError('Failed to apply for the job. Please try again.');
+  //   }
+  // };
+
+  const handleApply = async () => {
+    const userId = localStorage.getItem('userId'); // Retrieve user ID
+
     if (!userId) {
-      alert('You need to log in to apply for this job.');
-      router.push('/login');
+      alert('You must have an account to apply.');
+      const choice = window.confirm('Would you like to log in or sign up?');
+      if (choice) {
+        router.push('/login');
+      }
       return;
     }
-  
+
     try {
       await axios.post(`http://localhost:4000/applications/apply/${userId}/${jobId}`);
       alert('Application successful!');
