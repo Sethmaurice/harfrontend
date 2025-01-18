@@ -316,7 +316,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>© {new Date().getFullYear()} Harambee Rwanda. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Harambee Rwanda. All rights reserved. #SethMaurice</p>
           </div>
         </div>
       </footer>
