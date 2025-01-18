@@ -214,8 +214,32 @@ export default function AddJob() {
           >
             Add Job
           </button>
+          <button 
+          className="w-full py-3 bg-blue-200 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none transition"
+          onClick={() => window.location.href = '/jobs'} 
+          >
+            Browse Jobs
+          </button>
+          {/* <li><a href="/" className="hover:text-white transition">Logout</a></li> */}
         </form>
       </div>
+      {/* Footer
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div>
+              <h5 className="text-lg font-semibold mb-4">Quick Links</h5>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="/addJob" className="hover:text-white transition">Upload Jobs</a></li>
+                <li><a href="/jobs" className="hover:text-white transition">Browser Jobs</a></li>
+                <li><a href="/applicants" className="hover:text-white transition">Browser Applications</a></li>
+                <li><a href="/" className="hover:text-white transition">Logout</a></li>
+              </ul>
+            </div>
+          <p>© {new Date().getFullYear()} Harambee Rwanda. All rights reserved. #SethMaurice</p>
+          </div>
+        </div>
+      </footer> */}
     </div>
   );
 }

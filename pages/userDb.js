@@ -150,9 +150,21 @@ export default function UserDashboard() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-200 text-gray-600 py-4 text-center">
-        © {new Date().getFullYear()} Job Portal. All rights reserved.
+       {/* Footer */}
+       <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div>
+              <h5 className="text-lg font-semibold mb-4">Quick Links</h5>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="/jobs" className="hover:text-white transition">Browse Jobs</a></li>
+                <li><a href="/applications" className="hover:text-white transition">My Applications</a></li>
+                <li><a href="/" className="hover:text-white transition">Logout</a></li>
+              </ul>
+            </div>
+          <p>© {new Date().getFullYear()} Harambee Rwanda. All rights reserved. #SethMaurice</p>
+          </div>
+        </div>
       </footer>
     </div>
   );

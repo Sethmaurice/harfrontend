@@ -172,6 +172,16 @@ export default function Jobs() {
           </p>
         )}
       </div>
+
+       {/* Footer */}
+       <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <li><a href="/" className="hover:text-white transition">Logout</a></li>
+          <p>© {new Date().getFullYear()} Harambee Rwanda. All rights reserved. #SethMaurice</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
