@@ -115,7 +115,8 @@ export default function Apply() {
   useEffect(() => {
     const fetchJobDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/jobs`, {
+        // const response = await axios.get(`http://localhost:4000/jobs`, {
+          const response = await axios.get(`https://harambeeback.onrender.com/jobs`, {
           params: { id: jobId },
         });
         setJob(response.data[0]);
@@ -141,7 +142,8 @@ export default function Apply() {
 
     setIsSubmitting(true);
     try {
-      await axios.post(`http://localhost:4000/applications/apply/${userId}/${jobId}`);
+      // await axios.post(`http://localhost:4000/applications/apply/${userId}/${jobId}`);
+      await axios.post(`https://harambeeback.onrender.com/applications/apply/${userId}/${jobId}`);
       setShowConfirmation(true);
       setTimeout(() => {
         router.push('/applications');

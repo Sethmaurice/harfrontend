@@ -120,7 +120,8 @@ export default function Jobs() {
 
   const fetchJobs = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/jobs', { params: filters });
+      // const response = await axios.get('http://localhost:4000/jobs', { params: filters });
+      const response = await axios.get('https://harambeeback.onrender.com/jobs', { params: filters });
       setJobs(response.data);
     } catch (error) {
       console.error('Error fetching jobs:', error);

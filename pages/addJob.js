@@ -128,7 +128,8 @@ export default function AddJob() {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:4000/jobs/add', {
+      // await axios.post('http://localhost:4000/jobs/add', {
+        await axios.post('https://harambeeback.onrender.com/jobs/add', {        
         title,
         category,
         location,

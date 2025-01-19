@@ -61,7 +61,8 @@ function Applications() {
 
     const fetchApplications = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/applications/user/${userId}`);
+        // const response = await axios.get(`http://localhost:4000/applications/user/${userId}`);
+        const response = await axios.get(`https://harambeeback.onrender.com/applications/user/${userId}`);
         setApplications(response.data);
       } catch (err) {
         setError('Error fetching applications.');
