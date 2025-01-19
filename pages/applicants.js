@@ -241,13 +241,17 @@ const AdminApplications = () => {
   };
 
   const handleStatusChange = async (id, status) => {
+    setLoading(true);
     try {
       await axios.put(`/applications/${id}/status`, { status });
+      alert(`Status updated to ${status}. An email notification has been sent.`);
       fetchApplications();
     } catch (error) {
       console.error('Error updating status:', error);
-    }
-  };
+    } finally {
+      setLoading(false);
+    };
+  }
 
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this application?')) {
