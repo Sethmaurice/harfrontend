@@ -388,7 +388,7 @@ export default function AdminDashboard() {
             <h2 className="text-2xl font-bold text-gray-800">HR Dashboard</h2>
           </div>
           <nav className="flex-1 px-4 space-y-2">
-            <button onClick={() => router.push('/adminDB')} 
+            <button onClick={() => router.push('/adminDb')} 
                     className="w-full flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition">
               <TrendingUp size={20} />
               <span>Overview</span>
